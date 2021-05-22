@@ -43,7 +43,7 @@ const Table: React.FC = () => {
             <div className="table-row" key={pl.product.id}>
               <div className="table-row-item">{pl.product.name}</div>
               <div className="table-row-item">{pl.product.description}</div>
-              <div className="table-row-item">{pl.product.price}</div>
+              <div className="table-row-item">${pl.product.price}</div>
               <div className="table-row-item">
                 <input
                   defaultValue={pl.qty}
@@ -60,7 +60,7 @@ const Table: React.FC = () => {
                   onClick={removeOneProduct}
                   data-product-id={pl.product.id}
                 >
-                  Remove
+                  X
                 </button>
               </div>
             </div>

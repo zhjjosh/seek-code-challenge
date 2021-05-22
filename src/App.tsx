@@ -57,7 +57,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Add Checkout</h1>
+      <h1>Checkout</h1>
       <Selector
         options={customerOptions}
         placeholder="Please select a customer"
