@@ -1,20 +1,28 @@
 import React from "react";
 import "./style.scss";
-import {
-  SelectorInterface,
-  SelectorOptionInterface,
-} from "../../type/Interface";
 
-function Selector(props: SelectorInterface) {
-  const { placeholder, options } = props;
+type Props = {
+  options: ISelectorOption[];
+  placeholder: string;
+  selectorChanged: (arg: string) => void;
+};
+
+const Selector: React.FC<Props> = (props) => {
+  const { placeholder, options, selectorChanged } = props;
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    e.preventDefault();
+    selectorChanged(e.currentTarget.value);
+  };
   return (
-    <select className="selector">
-      <option value="0">{placeholder}</option>
-      {options.map((option: SelectorOptionInterface) => (
-        <option key={option.id}>{option.name}</option>
+    <select className="selector" onChange={handleSelectChange}>
+      <option value={0}>{placeholder}</option>
+      {options.map((option: ISelectorOption) => (
+        <option key={option.id} value={option.id}>
+          {option.name}
+        </option>
       ))}
     </select>
   );
-}
+};
 
 export default Selector;
