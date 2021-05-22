@@ -1,0 +1,34 @@
+[{
+        "id": 1,
+        "name": "SecondBite",
+        "pricingRule": [{
+            "type": "Multiple",
+            "discountedStartQty": 2,
+            "productId": 1
+        }]
+    },
+    {
+        "id": 2,
+        "name": "Axil Coffee Roasters",
+        "pricingRule": [{
+            "type": "Discount",
+            "discountedPrice": 299.99,
+            "productId": 2
+        }]
+    },
+    {
+        "id": 3,
+        "name": "MYER",
+        "pricingRule": [{
+                "type": "Multiple",
+                "discountedStartQty": 4,
+                "productId": 2
+            },
+            {
+                "type": "Discount",
+                "discountedPrice": 389.99,
+                "productId": 3
+            }
+        ]
+    }
+]

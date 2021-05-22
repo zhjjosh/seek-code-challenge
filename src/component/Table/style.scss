@@ -1,0 +1,28 @@
+.table {
+    margin-top: 20px;
+    &-row {
+        display: flex;
+        width: 100%;
+        text-align: left;
+        // border: 1px solid black;
+        &-item {
+            border-bottom: 1px solid black;
+            border-left: 1px solid black;
+            padding: 10px;
+            &:first-of-type {
+                width: 25%;
+            }
+            &:nth-of-type(2) {
+                width: 50%;
+            }
+            &:last-of-type {
+                width: 25%;
+                border-right: 1px solid black;
+            }
+        }
+        &:first-of-type {
+            background-color: #d6dbe2;
+            border-top: 1px solid black;
+        }
+    }
+}
